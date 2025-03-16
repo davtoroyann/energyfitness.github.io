@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 // ================================================================================================================================================
-
-
-
 // Page Scroll Animation
 function pageScroll(entry) {
     entry.forEach(change => {
@@ -31,9 +28,7 @@ function pageScroll(entry) {
     for (let elm of elements) {
         observer.observe(elm);
     }
-
-
-
+// ================================================================================================================================================
 // Registration Button Animation
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.reg-btn, .reg-form__buy, .form-reg__btn');
@@ -62,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     });
-
+// ================================================================================================================================================
 // Menu Navigation
     document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.header__link');
@@ -84,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+// ================================================================================================================================================
 // Registration Button Navigation to Registration Part
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.reg-btn, .header__registration');
@@ -105,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+// ================================================================================================================================================
 // Registration Menu Open
 document.addEventListener('DOMContentLoaded', function() {
     const regMenuBtn = document.getElementById('regMenu');
@@ -129,3 +124,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// ================================================================================================================================================
+// Scroll to Section
+document.querySelectorAll(".header__link").forEach(function (anchor) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        var scrollTo = target.offsetTop;
+        window.scrollTo({
+          top: scrollTo,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
